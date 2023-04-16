@@ -12,7 +12,7 @@ const cors = require("cors");
 const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const postRoutes = require("./routes/posts");
-const expressStaticGzip = require("express-static-gzip");
+
 
 //Use .env file in config folder
 require("dotenv").config({ path: "./config/.env" });
@@ -31,8 +31,6 @@ app.use(cors({
 //Static Folder
 app.use(express.static("frontend/build"));
 
-//Compressed folder
-app.use("/", expressStaticGzip(path.resolve(__dirname)));
 
 //Body Parsing
 app.use(express.urlencoded({ extended: true }));
