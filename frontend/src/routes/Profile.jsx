@@ -53,25 +53,27 @@ export function Profile() {
 				</div>
 
 				<div className="mt-5 col-5 mx-4">
-						<h2 className="text-center ">Add a Song</h2>
+						<h2 className="text-center mb-2">Add a Song</h2>
 						<form action="/api/post/createPost" encType="multipart/form-data" method="POST" onSubmit={handleSubmit}>
 							<div className="my-3">
-								<label htmlFor="title" className="form-label ">Title</label>
-								<input type="text" className="form-control" id="title" name="title" />
+								<label htmlFor="title" className="form-label " ></label>
+								<input placeholder="Title" type="text" className="form-control" id="title" name="title" />
+								
 							</div>
 							<div className="mb-3">
-								<label htmlFor="caption" className="form-label">Caption</label>
-								<textarea className="form-control" id="caption" name="caption"></textarea>
+								<label htmlFor="caption" className="form-label"></label>
+								<textarea className="form-control" id="caption" name="caption" placeholder="Caption"></textarea>
+								
 							</div>
 							<div className="mb-3">
-								<label htmlFor="imgUpload" className="form-label">MP3 or WAV</label>
-								<input type="file" className="form-control" id="imageUpload" name="file" />
+								<label htmlFor="imgUpload" className="form-label d-flex justify-content-center">MP3, MP4, or WAV</label>
+								<input type="file" className="form-control" id="imageUpload" name="file" placeholder="MP3, MP4, or Wav"/>
 							</div>
 							{/* <div className="mb-3">
 								<label htmlFor="imgUpload" className="form-label">Pic</label>
 								<input type="file" className="form-control" id="image2Upload" name="file" />
 							</div> */}
-							<button type="submit" className="btn btn-warning fw-bold" value="Upload">Submit</button>
+							<button type="submit" className="btn btn-warning fw-bold d-flex justify-content-center" value="Upload">Submit</button>
 						</form>
 					</div>
 			</div>

@@ -48,7 +48,9 @@ export default function Post() {
 					<h2 className="songTitle">{post.title.toUpperCase()}</h2>
 					<p className="songTitle ">{post.caption}</p>
 					{post.image.endsWith('.mp4') ? <video src={post.image} alt={post.caption} ></video> : 
-					 post.image.toLowerCase().endsWith('.mp3' || '.wav') ? 
+					 post.image.toLowerCase().endsWith('.mp3') ? 
+					 <audio src={post.image} className="audioPlayer col-12" controls alt={post.caption} ></audio> : 
+					 post.image.toLowerCase().endsWith('.wav') ?
 					 <audio src={post.image} className="audioPlayer col-12" controls alt={post.caption} ></audio> : 
 					<img src={post.image} className="img-fluid" />}
 					

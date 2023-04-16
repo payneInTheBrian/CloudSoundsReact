@@ -6,11 +6,10 @@ const PostPreview = ({ _id, image, caption, title }) => <li className="  warning
 	</Link>		
 		{<h5 className="songCaption">{caption}</h5>}
 	
-		{image.toLowerCase().endsWith('.mp4') ? <video src={image} controls alt={caption} ></video> : image.toLowerCase().endsWith('.mp3') || image.toLowerCase().endsWith('.wav')? <audio src={image} controls alt={caption} className="audioPlayer col-11  " ></audio> :<img src={image} className="img-fluid" alt={caption} />}
+		{image.toLowerCase().endsWith('.mp4') ? <video src={image} controls alt={caption} ></video> : image.toLowerCase().endsWith('.mp3') ? <audio src={image} controls alt={caption} className="audioPlayer col-11  " ></audio> : image.toLowerCase().endsWith('.wav') ? <audio src={image} controls alt={caption} className="audioPlayer col-11  " ></audio> : <img src={image} className="img-fluid" alt={caption} />}
 		
 		
-	
-	
+
 </li>
 
 export default PostPreview;
