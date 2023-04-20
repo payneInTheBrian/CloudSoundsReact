@@ -21,11 +21,7 @@ require("dotenv").config({ path: "./config/.env" });
 require("./config/passport")(passport);
 
 //Connect To Database
-connectDB().then(() => {
-  app.listen(PORT, () => {
-      console.log("listening for requests");
-  })
-});
+connectDB();
 
 app.use(cors({
   origin: (origin, callback) => callback(null, true),
@@ -68,7 +64,7 @@ app.use("/", mainRoutes);
 app.use("/api/post", postRoutes);
 
 app.use('*', (_, res) => {
-  res.sendFile(path.join(__dirname, 'frontend/src/index.jsx'));
+  res.sendFile(path.join(__dirname, 'frontend/src'));
 });
 
 /* res.sendFile(path.join(__dirname, 'frontend/build/index.html')); */

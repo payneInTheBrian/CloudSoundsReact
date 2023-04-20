@@ -13,6 +13,8 @@ export default function Index() {
 		<div class="contain d-flex justify-content-center">
 			<img src= "https://res.cloudinary.com/onehundreddevs/image/upload/v1673588157/rpnnmbcfz1fmwrfbbd7q.png" className="mt-3"/>
 	   		</div> 
+
+				
 			   <h3 className="text-center">Connect with other artists to discover new and exciting music.</h3>
 			   </div>
 			   <div className="d-flex justify-content-around mt-5">

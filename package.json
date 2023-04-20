@@ -4,7 +4,7 @@
   "description": "Cloud Sounds",
   "main": "server.js",
   "scripts": {
-    "start": "server.js",
+    "start": "nodemon server.js",
     "build": "npm --prefix frontend run build",
     "postinstall": "npm --prefix frontend install",
     "test": "echo \"Error: no test specified\" && exit 1"

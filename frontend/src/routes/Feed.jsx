@@ -16,7 +16,7 @@ export default function Feed() {
 			<div className="row justify-content-center mt-5">
 				<h2 style={{ textAlign: 'center' }}>Feed</h2>
 				<PostList posts={posts} />
-				<h1>hell yea</h1>
+				
 			</div>
 		</div>
 	)

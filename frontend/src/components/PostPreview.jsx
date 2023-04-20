@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const PostPreview = ({ _id, image, caption, title }) => <li className="  warning mt-5 playerF  ">
+const PostPreview = ({ _id, image, caption, title }) => <li className="  warning mt-1 playerF  ">
 	<Link className="link-warning" to={`/post/${_id}`}>
 		{<h3 className="dark songTitle">{title}</h3>}
 	</Link>		
