@@ -30,9 +30,11 @@ export default function Root() {
     <div className="backG">
       <header className="container shadow mb-5">
         <div className="text-center">
-          <h1 className="">((( Cloud Sounds )))</h1>
+          <h1 className="mt-3">((( Cloud Sounds )))</h1>
           {/* <span className="">We love Muzac</span> */}
           
+          <Link className="btn btn-warning mx-2 my-2 fw-bold" to="/login">Login</Link>
+          <Link className="btn btn-warning mx-2 my-2 fw-bold" to="/signup">Signup</Link>
           <Link className="btn btn-warning mx-2 my-2 fw-bold" to="/feed">Feed</Link>
           <Link className="btn btn-warning mx-2 my-2 fw-bold" to="/profile">Profile</Link>
           <Link to="/logout" className="btn btn-warning mx-2 my-2 fw-bold">Logout</Link>

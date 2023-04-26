@@ -46,6 +46,7 @@ export function Profile() {
 				<div className="row mt-5 d-flex justify-content-center">
 				<div className="col-6 rounded ml-2">
 					<h2 className="mt-5 text-center" >My Tracks</h2>
+					
 					<PostList posts={posts} />
 					<div className="row justify-content-center mt-5">
 						{/* <Link className="btn btn-primary" to="/feed">Return to Feed</Link> */}

@@ -21,8 +21,8 @@ export default function Login() {
 		}
 	};
 
-	return (
-		<main className="container cont">
+	
+	return 	<main className="container cont">
 			<div className="row justify-content-center">
 				<section className="col-6 mt-5">
 					<form action="/login" method="POST" onSubmit={handleSubmit}>
@@ -50,5 +50,5 @@ export default function Login() {
 				</section>
 			</div>
 		</main>
-	);
+	
 }

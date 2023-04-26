@@ -13,11 +13,14 @@
 
 .cont{
     padding-bottom: 2rem;
-    width: auto;
-    height:max-content;
+    min-width: 70vw;
+    min-height: 75vh;
     border: white solid 1px;
     border-radius: 25px;
     background:rgba(252, 252, 252, 0.6)
+}
+.insideCont{
+    min-width: 70vw;
 }
 
 .songTitle{
@@ -43,7 +46,7 @@
     background-image: url("https://images.unsplash.com/photo-1560803262-95a9de00a057?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
     background-size:cover;
     color: black;
-    min-height: 150vh;
+    min-height: 100vh;
 }
 
 
@@ -51,6 +54,19 @@
     font-weight: 600;
 }
 
-.extender{
-   
+
+
+
+.fooot{
+    width: 100%;
+    bottom:auto;
+    display: flex;
+    align-items: center;
+  justify-content: center;
+
+
+}
+
+.outL{
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }

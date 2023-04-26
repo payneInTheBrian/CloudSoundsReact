@@ -43,17 +43,18 @@ export default function Post() {
 
 	return (
 		<div className="container cont d-flex justify-content-center">
-			<div className="row justify-content-center mt-5">
+			<div className="row insideCont  mt-5">
 				<div className="">
 					<h2 className="songTitle">{post.title.toUpperCase()}</h2>
 					<p className="songTitle ">{post.caption}</p>
+					<div className="d-flex justify-content-center">
 					{post.image.endsWith('.mp4') ? <video src={post.image} alt={post.caption} ></video> : 
 					 post.image.toLowerCase().endsWith('.mp3') ? 
-					 <audio src={post.image} className="audioPlayer col-12" controls alt={post.caption} ></audio> : 
+					 <audio src={post.image} className="audioPlayer row col-8 " controls alt={post.caption} ></audio> : 
 					 post.image.toLowerCase().endsWith('.wav') ?
-					 <audio src={post.image} className="audioPlayer col-12" controls alt={post.caption} ></audio> : 
+					 <audio src={post.image} className="audioPlayer col-8 " controls alt={post.caption} ></audio> : 
 					<img src={post.image} className="img-fluid" />}
-					
+					</div>
   
 					{console.log(post.image)}
 					
@@ -66,7 +67,7 @@ export default function Post() {
 						>
 							<button className="btn btn-warning fa fa-heart " type="submit"></button>
 						</form>
-						<h3 className="col-3 d-flex justify-content-center">Likes: {post.likes}</h3>
+						<h6 className="col-3 d-flex justify-content-center">Likes: {post.likes}</h6>
 						{post.user === user._id && (
 							<form
 								action={`/api/post/deletePost/${post._id}?_method=DELETE`}
@@ -80,10 +81,10 @@ export default function Post() {
 					</div>
 				</div>
 				
-				<div className="col-6 mt-5 d-flex justify-content-center">
+				{/* <div className="col-6 mt-5 d-flex justify-content-center">
 					<Link className="btn btn-warning mx-2 fw-bold" to="/profile">Return to Profile</Link>
 					<Link className="btn btn-warning mx-2 fw-bold" to="/feed">Return to Feed</Link>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	)

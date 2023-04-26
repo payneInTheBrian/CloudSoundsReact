@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import Player from '../components/Player';
+
 
 
 
 export default function Index() {
-	return <main className="container cont">
+	return <main className="container cont ">
 		<div className=" mt-5">
 			
 				<h2 className="text-center">Upload your music and share it with the world! </h2>

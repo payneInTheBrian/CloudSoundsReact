@@ -18,6 +18,8 @@ import Logout from './routes/Logout';
 import Feed from './routes/Feed';
 import Post from './routes/Post';
 import Foot from './routes/Foot'
+import About from './routes/About'
+import Faqs from './routes/Faqs'
 
 const router = createBrowserRouter([
   {
@@ -43,7 +45,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/foot",
-        element: <foot />,
+        element: <Foot />,
       },
       {
         path: "/profile",
@@ -56,6 +58,14 @@ const router = createBrowserRouter([
       {
         path: "/post/:id",
         element: <Post />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/faqs",
+        element: <Faqs />,
       },
     ]
   },
