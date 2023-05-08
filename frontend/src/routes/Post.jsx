@@ -16,6 +16,12 @@ export default function Post() {
 			.then(({ post }) => setPost(post));
 	}, [setPost, postId]);
 
+	useEffect(() => {
+		fetch(API_BASE + "/api/profile", { credentials: "include" })
+			.then((res) => res.json())
+			
+	}, []);
+
 	if (post === undefined) return null;
 	else if (post === null) return <h2>Post not found</h2>;
 
@@ -47,6 +53,7 @@ export default function Post() {
 				<div className="">
 					<h2 className="songTitle">{post.title.toUpperCase()}</h2>
 					<p className="songTitle ">{post.caption}</p>
+					<p className="songTitle ">{post.userName}</p>
 					<div className="d-flex justify-content-center">
 					{post.image.endsWith('.mp4') ? <video src={post.image} alt={post.caption} ></video> : 
 					 post.image.toLowerCase().endsWith('.mp3') ? 
